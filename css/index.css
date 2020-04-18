@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Domine&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Domine", sans-serif;
+}
+main {
+    background-color: #a6b1e1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+h2 {
+    width: 100%;
+    text-align: center;
+} 
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
+}
+select {
+    margin: 1em 0em;
+    width: 50%;
+}
+button{
+    margin: 0 50%;
+}
+#beverage {
+    width: 95%;
+    text-align: center;
+    background-color: #c6cef0
+}
+#beverage img {
+    height: 50%;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+    <script src="./javascript/index.js"></script>
+</head>
+<body>
+    <main>
+        <div class="input-container">
+            <h2>Drink Selection</h2>
+            <select name="beverage_type" id="beverage_type">
+                <option value="null" text-align="center">Type of Beverage</option>
+                <option value="non_alcoholic">Non-Alcoholic</option>
+                <option value="alcoholic">Alcoholic</option>
+                <option value="surprise">Surprise Me!</option>
+            </select>
+            <button type="submit" onclick="setUpAPI()">Submit</button>
+        </div>
+        <div id="beverage"> &nbsp;</div>
+        <div class="help">
+            Drinks - how to obtain data: <br>
+            edit the url in index.js example<br>
+            once you parse objData, you have 100 "strDrink" objects, select one (my example used a random seed)<br>
+            each "strDrink" object has a <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"strDrink" - Name of drink <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"strDrinkThumb" - url of drink picture <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"idDrink" - id of drink (useless to us)<br>
+        </div>
+    </main>
+</body>
+</html>
+
