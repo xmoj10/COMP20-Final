@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Meal Selector</title>
+    <script src="./javascript/index.js"></script>
+</head>
+<body>
+    <main>
+        <div class="input-container">
+            <h2>Meal Selection</h2>
+            <select name="meal_type" id="meal_type">
+                <option value="null" text-align="center">Type of Meal</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="side">Side</option>
+				<option value="beef">Main Course (Beef)</option>
+				<option value="chicken">Main Course (Chicken)</option>
+				<option value="seafood">Main Course (Seafood)</option>
+				<option value="pasta">Main Course (Pasta)</option>
+				<option value="vegetarian">Main Course (Vegetarian)</option>
+				<option value="dessert">Dessert</option>				
+                <option value="surprise">Surprise Me!</option>
+            </select>
+            <button type="submit" onclick="setUpAPI()">Submit</button>
+        </div>
+        <div id="meal"> &nbsp;</div>
+    </main>
+<script language="javascript">	
+function setUpAPI() {
+    /* testing to ensure we enter this function */
+    // alert("Processing Your Drink Request!");
+
+    /* Main Function Processing */
+    /* grabbing div & user_bev_type to write text to */
+    output_div  = document.getElementById("meal");
+    user_answer = document.getElementById("meal_type").value;
+
+    if (user_answer == "Surprise Me!"){
+        /* generate random choice of alcoholic or non-alcoholic */
+        console.log("surprise me drink chosen");
+    } else if (user_answer == "Type of Meal") {
+        /* do nothing, user hasn't made a choice */ 
+        return;
+    }
+    
+    /* url to append user_answer to */
+    url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
+
+    /* creating a new HTTP request */
+    request = new XMLHttpRequest();
+    request.open("GET", url + user_answer, true);
+    request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200) {
+            objData = request.responseText;
+            objData = JSON.parse(objData);
+
+            meal_num = parseInt(Math.random() * objData.meals.length);
+            
+            output_div.innerHTML = "";
+            output_div.innerHTML += objData.meals[meal_num].strMeal + "<br>";
+            output_div.innerHTML += "<img src='" + objData.meals[meal_num].strMealThumb + "'>" + "<br>";
+
+        } else if (request.readyState == 4 && request.status != 200) {
+            alert("Please try again!");
+        };
+    }
+    request.send();
+}
+</script>
+
+</body>
+</html>
+
