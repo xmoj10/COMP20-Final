@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #717581;
+}
+
+.wrapper {
+  margin: 6.25em 3.75em 0px 3.75em;
+}
+
+.wrapper .title {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 60%;
+  margin: 1.5rem;
+}
+
+select {
+  font-weight: 600;
+}
+
+.select-container {
+  position: relative;
+  padding: 0.7em;
+  margin-bottom: 2em;
+  border: 2px solid rgb(218, 213, 213);
+  border-radius: 0.5em;
+}
+
+.select-container select {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.select-container::after {
+  content: "local_dining";
+  font-family: "material icons";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+a.button1 {
+  display: inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid rgb(218, 213, 213);
+  margin:0 0.3em 0.3em 0;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+a.button1:hover {
+  color: #000000;
+  background-color: rgb(218, 213, 213);
+}
+
+@media all and (max-width:30em) {
+  a.button1 {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+.result-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8em;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: 100px 450px 80px;
+  grid-template-areas: "text" "image" "collection";
+
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align: center;
+  
+
+  transition: 0.5s ease;
+  margin:30px;
+}
+.card-image {
+  grid-area: image;
+  padding-top: 1.5em;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.card-text h2 {
+  margin-top:0px;
+  font-size: 1.5em;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+a.button2 {
+  display: inline-block;
+  padding:1em 1.2em;
+  border:0.1em solid black;
+  margin:0 0.3em 0.3em 0;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(15, 201, 145);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+a.button2:hover {
+  color: #000000;
+  background-color: rgb(218, 213, 213);
+}
+
+@media all and (max-width:30em) {
+  a.button2 {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
