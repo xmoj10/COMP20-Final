@@ -1,7 +1,8 @@
 function setUpAPI() {
     /* Main Function Processing */
     /* grabbing div & user_bev_type to write text to */
-    output_div  = document.getElementById("beverage");
+    output_div  = document.getElementById("beverage-image");
+    output_div2  = document.getElementById("beverage-name");
     user_answer = document.getElementById("beverage_type").value;
     console.log(user_answer);
     
@@ -29,8 +30,8 @@ function setUpAPI() {
             drink_num = parseInt(Math.random() * objData.drinks.length);
             
             output_div.innerHTML = "";
-            output_div.innerHTML += objData.drinks[drink_num].strDrink + "<br>";
-            output_div.innerHTML += "<img src='" + objData.drinks[drink_num].strDrinkThumb + "'>";
+            output_div2.innerHTML = objData.drinks[drink_num].strDrink + "<br>";
+            output_div.innerHTML = "<img src='" + objData.drinks[drink_num].strDrinkThumb + "' style='width:400px'>";
 
         } else if (request.readyState == 4 && request.status != 200) {
             alert("Could not connect to server, please try again!");

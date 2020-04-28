@@ -3,13 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/meal.css" />
     <title>Document</title>
     <script src="./javascript/index.js"></script>
+    
 </head>
 <body>
-    <main>
-        <div class="input-container">
+
+    <nav class="navbar">
+        <ul class="navbar-nav">
+          <li class="logo">
+            <a href="#" class="nav-link">
+              <span class="link-text logo-text">Chef's<br>Picks</span>
+              <svg viewBox="0 0 448 512">
+                <g class="fa-group">
+                  <path
+                    fill="currentColor"
+                    d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
+                    class="fa-secondary"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
+                    class="fa-primary"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a href="meal.html" class="nav-link meals-link">
+              <svg data-icon="hamburger" viewBox="0 0 512 512"
+                class="svg-inline--fa fa-hamburger fa-w-16"
+              >
+                <g class="fa-group">
+                  <path
+                    fill="currentColor"
+                    d="M464 256H48a48 48 0 0 0 0 96h416a48 48 0 0 0 0-96zm16 128H32a16 16 0 0 0-16 16v16a64 64 0 0 0 64 64h352a64 64 0 0 0 64-64v-16a16 16 0 0 0-16-16zM58.64 224h394.72c34.57 0 54.62-43.9 34.82-75.88C448 83.2 359.55 32.1 256 32c-103.54.1-192 51.2-232.18 116.11C4 180.09 24.07 224 58.64 224zM384 112a16 16 0 1 1-16 16 16 16 0 0 1 16-16zM256 80a16 16 0 1 1-16 16 16 16 0 0 1 16-16zm-128 32a16 16 0 1 1-16 16 16 16 0 0 1 16-16z"
+                    class="fa-secondary"
+                  ></path>
+                </g>
+              </svg>
+              <span class="link-text">Meals</span>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a href="index.html" class="nav-link drinks-link current-link">
+              <svg data-icon="coffee" viewBox="-90 0 450 512"
+                class="svg-inline--fa fa-coffee fa-w-"
+              >
+                <g class="fa-group">
+                  <path
+                    fill="currentColor"
+                    d="M216 464h-40V346.81c68.47-15.89 118.05-79.91 111.4-154.16l-15.95-178.1C270.71 6.31 263.9 0 255.74 0H32.26c-8.15 0-14.97 6.31-15.7 14.55L.6 192.66C-6.05 266.91 43.53 330.93 112 346.82V464H72c-22.09 0-40 17.91-40 40 0 4.42 3.58 8 8 8h208c4.42 0 8-3.58 8-8 0-22.09-17.91-40-40-40zM61.75 48h164.5l7.17 80H54.58l7.17-80z"
+                    class="fa-secondary"
+                  ></path>
+                </g>
+              </svg>
+              <span class="link-text">Drinks</span>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a href="#" class="nav-link collections-link">
+              <svg data-icon="plus-square" viewBox="-50 0 512 512"
+                class="svg-inline--fa fa-plus-square fa-w-14"
+              >
+                <g class="fa-group">
+                  <path
+                    fill="currentColor"
+                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-32 252c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92H92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+                    class="fa-secondary"
+                  ></path>
+                </g>
+              </svg>
+              <span class="link-text">Collections</span>
+            </a>
+          </li>
+            <svg></svg>
+        </ul>
+    </nav>
+
+
+
+        <!-- <div class="input-container">
             <h2>Drink Selection</h2>
             <select name="beverage_type" id="beverage_type">
                 <option value="null" text-align="center">Type of Beverage</option>
@@ -28,8 +109,41 @@
             &nbsp;&nbsp;&nbsp;&nbsp;"strDrink" - Name of drink <br>
             &nbsp;&nbsp;&nbsp;&nbsp;"strDrinkThumb" - url of drink picture <br>
             &nbsp;&nbsp;&nbsp;&nbsp;"idDrink" - id of drink (useless to us)<br>
+        </div> -->
+
+        <div class="wrapper">
+            <div class="title">
+              Choose a type of drink from the options below
+            </div>
         </div>
-    </main>
+
+        <center>
+        <div class="container">
+            <div class="select-container">
+              <select name="beverage_type" id="beverage_type">
+                <option value="null" text-align="center">Type of Beverage</option>
+                <option value="non_alcoholic">Non-Alcoholic</option>
+                <option value="alcoholic">Alcoholic</option>
+                <option value="surprise">Surprise Me!</option>
+              </select>
+            </div>
+            <a href='javascript:;' class="button1" onclick="setUpAPI()">Submit</a>
+          </div>
+        
+          <div class="result-section">
+          <div class="card">
+              <div class="card-text">
+                <h2 id="beverage-name"></h2>
+              </div>
+              <div class="card-image" id="beverage-image"></div>
+              <div class="card-button">
+                <a href='javascript:;' class="button2">Add to Collection</a>
+              </div>
+              
+            </div>
+          </div>
+        </center>
+
 </body>
 </html>
 
