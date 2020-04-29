@@ -34,7 +34,7 @@ function setUpAPI() {
             output_div.innerHTML = "<img src='" + objData.drinks[drink_num].strDrinkThumb + "' style='width:400px'>";
 
             document.getElementById("recipeName").value = objData.drinks[drink_num].strDrink;
-			document.getElementById("imgLink").value = objData.drinks[drink_num].strDrinkThumb;
+	    document.getElementById("imgLink").value = objData.drinks[drink_num].strDrinkThumb;
             
         } else if (request.readyState == 4 && request.status != 200) {
             alert("Could not connect to server, please try again!");
