@@ -10,6 +10,8 @@
 
 body {
   background: #717581;
+  background-image: url("https://i.imgur.com/LxR5Zpn.jpg");
+  background-size: 150px 150px;
 }
 
 .wrapper {
@@ -36,9 +38,12 @@ select {
 .select-container {
   position: relative;
   padding: 0.7em;
+  padding-left: 3em;
   margin-bottom: 2em;
   border: 2px solid rgb(218, 213, 213);
   border-radius: 0.5em;
+  background-color: rgba(255,255,255,0.5);
+
 }
 
 .select-container select {
@@ -74,6 +79,7 @@ a.button1 {
   color: #fff;
   text-align: center;
   transition: all 0.2s;
+  background-color: rgba(255,255,255,0.5);
 }
 
 a.button1:hover {
@@ -107,7 +113,7 @@ a.button1:hover {
   background: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   text-align: center;
-  
+
 
   transition: 0.5s ease;
   margin:30px;
@@ -137,20 +143,20 @@ a.button1:hover {
 a.button2 {
   display: inline-block;
   padding:1em 1.2em;
-  border:0.1em solid black;
+  border:0.1em solid rgb(241, 15, 15);
   margin:0 0.3em 0.3em 0;
   border-radius: 0.2em;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 600;
-  color: rgb(15, 201, 145);
+  color: rgb(241, 15, 15);
   text-align: center;
   transition: all 0.2s;
 }
 
 a.button2:hover {
-  color: #000000;
-  background-color: rgb(218, 213, 213);
+  color: #FFFF;
+  background-color: rgb(241, 15, 15);
 }
 
 @media all and (max-width:30em) {

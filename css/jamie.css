@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Domine&display=swap");
+
+@media only screen and (min-width: 800px) {
+
+  #hometitle {
+      font-size: 5em;
+
+  }
+
+  .wrapper2 {
+    padding-left:5em;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  #hometitle {
+      font-size: 3em;
+  }
+
+}
+
+#hometitle {
+  padding:0.35em 1.2em;
+  border:0.02em solid rgb(218, 213, 213);
+  border-radius: 1em;
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+
+
+}
+
+.wrapper2 {
+  margin: 6.25em 3.75em 0px 3.75em;
+}
+
+.wrapper2 .title {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+a.button3 {
+  display: inline-block;
+  font-size: 20pt;
+  padding:0.35em 1.2em;
+  border:0.1em solid #8c0010;
+  margin:0 0.3em 0.3em 0;
+  border-radius: .25em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  transition: all 0.2s;
+  background-color:#8c0010;
+}
+
+a.button3:hover {
+  color: #000000;
+  background-color: rgb(218, 213, 213);
+}
+
+#aboutus{
+  display: inline-block;
+  padding:0.35em 1.2em;
+  border:0.02em solid rgb(218, 213, 213);
+  border-radius: 1em;
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+  background-size:100%;
+}
+
+.sameline {
+  display: inline-block;
+}
+
+#chefhat{
+  padding: 2.2em;
+  float: left;
+}
+
+#desctext{
+  padding-bottom:2em;
+  padding-top:2em;
+  padding-right:6%;
+  padding-left:3%;
+
+  text-align: left;
+  display: inline-block;
+
+}
+.subtitle {
+  font-size: 20pt;
+}
+
+a.underline {
+  text-decoration: underline;
+  color: #8c0010;
+  transition: all 0.2s;
+
+}
+
+a.underline:hover  {
+  color: rgb(218, 213, 213);
+}

@@ -5,8 +5,8 @@
   font-family: "Montserrat", sans-serif;
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
+  --bg-primary: #59000a;
+  --bg-secondary: #1c0303;
   --transition-speed: 600ms;
 }
 
@@ -67,7 +67,7 @@ main {
   height: 5rem;
   color: var(--text-primary);
   text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
+  filter: grayscale(40%) opacity(0.8);
   /* transition: var(--transition-speed); */
 }
 
@@ -78,15 +78,15 @@ main {
 }
 
 .meals-link:hover {
-  border: solid 1px #fcd65a;
+  border: solid 1px #de3c3c;
 }
 
 .drinks-link:hover {
-  border: solid 1px #fcd65a;
+  border: solid 1px #de3c3c;
 }
 
 .collections-link:hover {
-  border: solid 1px #fcd65a;
+  border: solid 1px #de3c3c;
 }
 
 .link-text {
@@ -101,11 +101,11 @@ main {
 }
 
 .fa-primary {
-  color: #c6cef0;
+  color: #ff6d45;
 }
 
 .fa-secondary {
-  color: #8092df;
+  color: #c72020;
 }
 
 .fa-primary,
@@ -143,7 +143,7 @@ main {
 }
 
 .current-link {
-  border: solid 1px #fcd65a;
+  border: solid 1px #de3c3c;
   filter: none;
 }
 
