@@ -48,7 +48,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="drink.html" class="nav-link drinks-link">
+          <a href="index.html" class="nav-link drinks-link">
             <svg data-icon="coffee" viewBox="-90 0 450 512"
               class="svg-inline--fa fa-coffee fa-w-"
             >
@@ -106,7 +106,7 @@
         <option value="surprise">Surprise Me!</option>
       </select>
     </div>
-    <a href='javascript:;' class="button1" onclick="setUpAPI()">Submit</a>
+    <a href="javascript:;" class="button1" onclick="setUpAPI()">Submit</a>
   </div>
 
   <div class="result-section">
@@ -115,9 +115,21 @@
         <h2 id="meal-name"></h2>
       </div>
       <div class="card-image" id="meal-image"></div>
-      <div class="card-button">
-        <a href='javascript:;' class="button2">Add to Collection</a>
-      </div>
+     
+	  <div class="card-button">
+		<form id="query" method="GET" onSubmit="return validate()" action="http://localhost:8080">
+		Your Username:
+		<input type="text" id ="username" name="username" placeholder="username"> <br>
+		<div id="errorBox"></div>
+			
+		<input type="text" name ="recipe" id="recipeName" style="display:none">
+		<input type="text" name ="imgLink" id="imgLink" style="display:none">
+		<input type="text" name ="instructions" id="instructions">
+
+
+		<input type="submit" value="Save This Recipe">
+		</form>
+	  </div>
       
     </div>
   </div>
@@ -127,29 +139,27 @@
     <script language="javascript">	
       function setUpAPI() {
 
-          /* testing to ensure we enter this function */
-          // alert("Processing Your Drink Request!");
-      
           /* Main Function Processing */
           /* grabbing div & user_bev_type to write text to */
           output_div  = document.getElementById("meal-image");
           output_div2  = document.getElementById("meal-name");
           user_answer = document.getElementById("meal_type").value;
-      
-          if (user_answer == "Surprise Me!"){
-              /* generate random choice of alcoholic or non-alcoholic */
+      	  console.log(user_answer);
+		  
+          if (user_answer == "surprise"){
+              var url = "https://www.themealdb.com/api/json/v1/1/random.php";
               console.log("surprise me drink chosen");
           } else if (user_answer == "Type of Meal") {
               /* do nothing, user hasn't made a choice */ 
               return;
-          }
+          } else {
+			  var url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=" + user_answer;
+		  }
           
-          /* url to append user_answer to */
-          url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
       
           /* creating a new HTTP request */
           request = new XMLHttpRequest();
-          request.open("GET", url + user_answer, true);
+          request.open("GET", url, true);
           request.onreadystatechange = function() {
               if (request.readyState == 4 && request.status == 200) {
                   objData = request.responseText;
@@ -160,6 +170,10 @@
                   output_div.innerHTML = "";
                   output_div2.innerHTML = objData.meals[meal_num].strMeal + "<br>";
                   output_div.innerHTML = "<img src='" + objData.meals[meal_num].strMealThumb + "' style='width:400px'>" + "<br>";
+				  
+				document.getElementById("recipeName").value = objData.meals[meal_num].strMeal;
+				document.getElementById("imgLink").value = objData.meals[meal_num].strMealThumb;
+
 
               } else if (request.readyState == 4 && request.status != 200) {
                   alert("Please try again!");
@@ -167,6 +181,13 @@
           }
           request.send();
         }
+		
+		function validate(){
+			if(document.getElementById("username").value == "" ){
+				document.getElementById("errorBox").innerHTML = "Please Enter a Username";
+				return false;
+			}
+		}
       </script>
   </body>
 </html>
