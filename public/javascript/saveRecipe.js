@@ -3,7 +3,7 @@ var http = require('http');
 var url = require('url');
 var MongoClient = require('mongodb').MongoClient;
 var MongoUrl = "mongodb+srv://xmojic01:<password>@tuftscomp20-38b0t.mongodb.net/test?retryWrites=true&w=majority";
-
+var port = process.env.PORT || 5000
 
 //Create Server
 http.createServer(function(req, res) {
@@ -64,6 +64,6 @@ var queryData = url.parse(req.url, true).query;
         }) // End Mongo Connection
     } // End if GET statement
 
-}).listen(8080);
+}).listen(port);
 
 
