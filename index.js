@@ -8,8 +8,8 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   // .set('views', path.join(__dirname, 'views'))
   // .set('view engine', 'ejs')
-  .get('/home', (req, res) =>
-                res.sendFile(path.join(__dirname, 'public/meal.html')))
+  .get('', (req, res) =>
+                res.sendFile(path.join(__dirname, 'public/index.html')))
   .get('/meal', (req, res) =>
                 res.sendFile(path.join(__dirname, 'public/meal.html')))
   .get('/drink', (req, res) =>
