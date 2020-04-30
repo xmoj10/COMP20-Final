@@ -1,5 +1,4 @@
 function setUpAPI() {
-
           /* Main Function Processing */
           /* grabbing div & user_bev_type to write text to */
           output_div  = document.getElementById("meal-image");
