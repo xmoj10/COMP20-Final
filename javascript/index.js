@@ -44,8 +44,9 @@ function setUpAPI() {
    
 }
 
-function validate(){
+function validate() {
 	if(document.getElementById("username").value == "" ){
 		document.getElementById("errorBox").innerHTML = "Please Enter a Username";
 		return false;
-	}
+    }
+}
