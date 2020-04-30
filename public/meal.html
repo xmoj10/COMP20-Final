@@ -5,8 +5,6 @@
     <script src="https://kit.fontawesome.com/fca72aa88e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/sidebar.css" />
     <link rel="stylesheet" href="./css/meal.css" />
-    <link rel="shortcut icon" type="image/png" href="./image/favicon.png">
-    <title>Chef's Pick</title>
   </head>
 
   <body>
@@ -127,7 +125,7 @@
       <div class="card-image" id="meal-image"></div>
      
 	  <div class="card-button">
-		<form id="query" method="GET" onSubmit="return validate()" action="javascript/saveRecipe.js">
+		<form id="query" method="GET" onSubmit="return validate()" action="../saveRecipe.js">
 		Your Username:
 		<input type="text" id ="username" name="username" placeholder="username"> <br>
 		<div id="errorBox"></div>
