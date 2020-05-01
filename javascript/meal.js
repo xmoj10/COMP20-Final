@@ -43,12 +43,8 @@ function setUpAPI() {
         }
 		
 function validate(){
-	if (document.getElementById("username").value == "" ) {
-		document.getElementById("errorBox").innerHTML = "Please Enter a Username";
-		return false;
-	} else if (document.getElemendById("meal_type").value == "null"){
-		document.getElementbyID("errorBox").innerHTML = "Please Select a Meal to Add";
-		return false;
-	}
+	if (document.getElementById("recipeName").value == ""{
+	    return false;
+	  }
 
 }
