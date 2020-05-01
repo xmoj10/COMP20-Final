@@ -48,6 +48,7 @@ function validate(){
 		return false;
 	} else if (document.getElemendById("meal_type").value == "null"){
 		document.getElementbyID("errorBox").innerHTML = "Please Select a Meal to Add";
+		return false;
 	}
 
 }
