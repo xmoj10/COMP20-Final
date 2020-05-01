@@ -122,13 +122,18 @@
                         <input type="text" name="imgLink" id="imgLink" style="display:none">
 
 
-                        <input type="submit" value="Save This Pick">
+                        <input type="submit" value="Save This Pick" onSubmit="return checkEntered()">
                     </form>
                 </div>
 
             </div>
         </div>
     </center>
+    <script>
+        function checkEntered() {
+            return false;
+        }
+    </script>
 </body>
 
 </html>
