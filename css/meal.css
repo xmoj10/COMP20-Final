@@ -106,8 +106,8 @@ a.button1:hover {
 .card {
   display: grid;
   grid-template-columns: 500px;
-  grid-template-rows: 100px 450px 80px;
-  grid-template-areas: "text" "image" "collection";
+  grid-template-rows: 100px 450px 120px;
+  grid-template-areas: "text" "image" "button";
 
   border-radius: 18px;
   background: white;
@@ -140,7 +140,7 @@ a.button1:hover {
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
 
-a.button2 {
+/* a.button2 {
   display: inline-block;
   padding:1em 1.2em;
   border:0.1em solid rgb(241, 15, 15);
@@ -164,4 +164,39 @@ a.button2:hover {
     display: block;
     margin: 0.4em auto;
   }
+} */
+
+.card-button {
+  grid-area: button;
+  margin-top: 0.5em;
+}
+
+form input[type=text] {
+  outline: none;
+  padding: 0.5em 0.5em;
+  border:0.05em solid black;
+  font-weight: 600;
+}
+
+form input[type=text]::placeholder {
+  font-weight: 200;
+}
+
+form input[type=submit] {
+  padding:0.7em 1em;
+  border:0.05em solid black;
+  margin:1em 0.3em 0.3em 0;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(12, 201, 153);
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+form input[type=submit]:hover {
+  color: white;
+  background-color: rgb(12, 201, 153);
 }

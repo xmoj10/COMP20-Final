@@ -96,16 +96,16 @@
                     </div>
                     <div class="card-image" id="beverage-image"></div>
                     <div class="card-button">
-                        <form id="query" method="GET" onsubmit="return validate()" action="https://chefspicks.herokuapp.com/">
+                        <form id="query" method="GET" action="https://chefspicks.herokuapp.com/">
                             <input type="text" name="formType" id="upload" value="upload" style="display: none;"/>
-                            Your Username: DRINKSFINAL
-                            <input type="text" id="username" name="username" placeholder="username"/>
+                            Your Username:
+                            <input type="text" id="username" name="username" placeholder="username" required/>
                             <br/>
-                            <div id="errorBox"></div>
+                            <!-- <div id="errorBox"></div> -->
 
                             <input type="text" name="recipe" id="recipeName" style="display: none;"/>
                             <input type="text" name="imgLink" id="imgLink" style="display: none;"/>
-                            <input type="submit" value="Save This Recipe"/>
+                            <input type="submit" value="Save This Pick"/>
                         </form>
                     </div>
                 </div>
