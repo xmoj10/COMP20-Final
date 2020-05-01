@@ -101,7 +101,6 @@
                         Your Username: 
                         <input type="text" id="username" name="username" placeholder="username" required>
                         <br>
-                	<div id="errorBox"></div>
 
                         <input type="text" name="recipe" id="recipeName" style="display:none">
                         <input type="text" name="imgLink" id="imgLink" style="display:none">
@@ -116,7 +115,6 @@
 	<script>
         function validate(){
 	    if (document.getElementById("recipeName").value == ""){
-	    	document.getElementbyId("errorBox").innerHTML == "Please Select a Recipe to Save";
 		return false;
 	  }
         
