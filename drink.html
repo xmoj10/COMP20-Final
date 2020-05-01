@@ -96,33 +96,34 @@
                     </div>
                     <div class="card-image" id="beverage-image"></div>
                     <div class="card-button">
-                        <form id="query" method="GET" action="https://chefspicks.herokuapp.com/" onSumbit = "return validate()">
-                            <input type="text" name="formType" id="upload" value="upload" style="display: none;"/>
-                            Your Username:
-                            <input type="text" id="username" name="username" placeholder="username" required/>
-                            <br/>
-                            <div id="errorBox"></div>
-                            
-                            <input type="text" name="recipe" id="recipeName" style="display: none;"/>
-                            <input type="text" name="imgLink" id="imgLink" style="display: none;"/>
-                            
+                        <form id="query" method="GET" onSubmit="return validate()" action="https://chefspicks.herokuapp.com/">
+                        <input type="text" name="formType" value="upload" style="display: none;" />
+                        Your Username: 
+                        <input type="text" id="username" name="username" placeholder="username" required>
+                        <br>
+                	<div id="errorBox"></div>
+
+                        <input type="text" name="recipe" id="recipeName" style="display:none">
+                        <input type="text" name="imgLink" id="imgLink" style="display:none">
+
+
                         <input type="submit" value="Save This Pick" onSubmit="return validate()">
-                        </form>
+                    </form>
                     </div>
                 </div>
             </div>
-        </center>
-        
-        <script language="javascript">
-            function validate(){
+    </center>
+	<script>
+        function validate(){
 	    if (document.getElementById("recipeName").value == ""){
 	    	document.getElementbyId("errorBox").innerHTML == "Please Select a Recipe to Save";
 		return false;
 	  }
-            
-        </script>
         
-        
-        
+        function checkEntered() {
+            return false;
+        }
+    </script>
+	    
     </body>
 </html>
