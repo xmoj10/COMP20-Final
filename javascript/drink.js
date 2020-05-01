@@ -50,6 +50,7 @@ function validate(){
 		return false;
 	} else if (document.getElemendById("beverage_type").value == "null"){
 		document.getElementbyID("errorBox").innerHTML = "Please Select a Drink to Add";
+		return false;
 	}
 
 }
