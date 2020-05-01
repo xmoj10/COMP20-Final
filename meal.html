@@ -122,7 +122,7 @@
                         <input type="text" name="imgLink" id="imgLink" style="display:none">
 
 
-                        <input type="submit" value="Save This Pick" onSubmit="return checkEntered()">
+                        <input type="submit" value="Save This Pick" onSubmit="return validate()">
                     </form>
                 </div>
 
@@ -130,6 +130,11 @@
         </div>
     </center>
     <script>
+        function validate(){
+	    if (document.getElementById("recipeName").value == ""){
+	    return false;
+	  }
+        
         function checkEntered() {
             return false;
         }
