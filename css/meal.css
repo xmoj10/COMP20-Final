@@ -38,7 +38,7 @@ select {
 .select-container {
   position: relative;
   padding: 0.7em;
-  padding-left: 3em;
+  padding-left: 2em;
   margin-bottom: 2em;
   border: 2px solid rgb(218, 213, 213);
   border-radius: 0.5em;
