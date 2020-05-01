@@ -44,9 +44,12 @@ function setUpAPI() {
    
 }
 
-// function validate() {
-// 	if (document.getElementById("username").value == ""){
-// 		document.getElementById("errorBox").innerHTML = "Please Enter a Username";
-// 		return false;
-//     }
-// }
+function validate(){
+	if (document.getElementById("username").value == "" ) {
+		document.getElementById("errorBox").innerHTML = "Please Enter a Username";
+		return false;
+	} else if (document.getElemendById("beverage_type").value == "null"){
+		document.getElementbyID("errorBox").innerHTML = "Please Select a Drink to Add";
+	}
+
+}
