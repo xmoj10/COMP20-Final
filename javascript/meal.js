@@ -43,7 +43,7 @@ function setUpAPI() {
         }
 		
 function validate(){
-	if (document.getElementById("recipeName").value == ""{
+	if (document.getElementById("recipeName").value == ""){
 	    return false;
 	  }
 
