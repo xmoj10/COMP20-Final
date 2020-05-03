@@ -14,6 +14,7 @@ function setUpAPI() {
     }
     else {
         /* do nothing, user hasn't made a choice */
+        output_div.innerHTML = "<strong style='color: red;'> Please Select A Beverage Type </strong>";
         return;
     }
     
@@ -41,16 +42,6 @@ function setUpAPI() {
     }
     request.send();
    
-}
-
-function resultsAppear () {
-    document.getElementById("error").innerHTML = "";
-    if (document.getElementById("beverage_type").value != "null") {
-        document.getElementById('result').style.display="block";
-    } else {
-        document.getElementById("error").innerHTML = "<strong style='color: white;'>" + "Please Select A Beverage Type" + "</strong>";
-    }
-    setUpAPI();
 }
 
 function validate(){

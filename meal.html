@@ -100,49 +100,47 @@
                     <option value="surprise">Surprise Me!</option>
                 </select>
             </div>
-            <a href="javascript:;" class="button1" onclick="resultsAppear()">Submit</a>
+            <a href="javascript:;" class="button1" onclick="setUpAPI()">Submit</a>
         </div>
 
-        <div id="error"></div>
-
-        <div id="result">
-            <div class="result-section">
-                <div class="card">
-                    <div class="card-text">
-                        <h2 id="meal-name"></h2>
-                    </div>
-                    <div class="card-image" id="meal-image"></div>
-
-                    <div class="card-button">
-                        <form id="query" method="GET" onSubmit="return validate()" action="https://chefspicks.herokuapp.com/">
-                            <input type="text" name="formType" value="upload" style="display: none;" />
-                                    Your Username: 
-                            <input type="text" id="username" name="username" placeholder="username" required>
-                            <br>
-
-                            <input type="text" name="recipe" id="recipeName" style="display:none">
-                            <input type="text" name="imgLink" id="imgLink" style="display:none">
-
-                            <input type="submit" value="Save This Pick" onSubmit="return validate()">
-                        </form>
-                    </div>
+        <div class="result-section">
+            <div class="card">
+                <div class="card-text">
+                    <h2 id="meal-name"></h2>
                 </div>
+                <div class="card-image" id="meal-image"></div>
+
+                <div class="card-button">
+                    <form id="query" method="GET" onSubmit="return validate()" action="https://chefspicks.herokuapp.com/">
+                        <input type="text" name="formType" value="upload" style="display: none;" />
+                        Your Username: 
+                        <input type="text" id="username" name="username" placeholder="username" required>
+                        <br>
+                	<div id="errorBox"></div>
+
+                        <input type="text" name="recipe" id="recipeName" style="display:none">
+                        <input type="text" name="imgLink" id="imgLink" style="display:none">
+
+
+                        <input type="submit" value="Save This Pick" onSubmit="return validate()">
+                    </form>
+                </div>
+
             </div>
         </div>
-        
     </center>
     <script>
         function validate(){
-            if (document.getElementById("recipeName").value == ""){
-                document.getElementbyId("errorBox").innerHTML == "Please Select a Recipe to Save";
-                return false;
-            }
-        }
+	    if (document.getElementById("recipeName").value == ""){
+	    	document.getElementbyId("errorBox").innerHTML == "Please Select a Recipe to Save";
+		return false;
+	  }
+	}
         
         function checkEntered() {
             return false;
         }
-</script>
+    </script>
 </body>
 
 
