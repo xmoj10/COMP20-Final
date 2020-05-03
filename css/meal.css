@@ -94,6 +94,10 @@ a.button1:hover {
   }
 }
 
+#result {
+  display: none;
+}
+
 .result-section {
   width: 100vw;
   height: 100vh;
