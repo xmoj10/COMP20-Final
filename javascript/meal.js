@@ -31,6 +31,9 @@ function setUpAPI() {
                   output_div2.innerHTML = objData.meals[meal_num].strMeal + "<br>";
                   output_div.innerHTML = "<img src='" + objData.meals[meal_num].strMealThumb + "' style='width:400px'>" + "<br>";
 
+                  document.getElementById("recipeName").value = objData.meals[meal_num].strMeal;
+				  document.getElementById("imgLink").value = objData.meals[meal_num].strMealThumb;
+
               } else if (request.readyState == 4 && request.status != 200) {
                   alert("Please try again!");
             };
