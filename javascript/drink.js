@@ -31,6 +31,9 @@ function setUpAPI() {
             output_div.innerHTML = "";
             output_div2.innerHTML = objData.drinks[drink_num].strDrink + "<br>";
             output_div.innerHTML = "<img src='" + objData.drinks[drink_num].strDrinkThumb + "' style='width:400px'>";
+
+            document.getElementById("recipeName").value = objData.drinks[drink_num].strDrink;
+	        document.getElementById("imgLink").value = objData.drinks[drink_num].strDrinkThumb;
             
         } else if (request.readyState == 4 && request.status != 200) {
             alert("Could not connect to server, please try again!");
@@ -48,4 +51,10 @@ function resultsAppear () {
         document.getElementById("error").innerHTML = "<strong style='color: white;'>" + "Please Select A Beverage Type" + "</strong>";
     }
     setUpAPI();
+}
+
+function validate(){
+	if (document.getElementById("recipeName").value == ""){
+	    return false;
+	  }
 }

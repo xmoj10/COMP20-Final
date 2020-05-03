@@ -50,5 +50,11 @@ function resultsAppear () {
     }
     setUpAPI();
 }
+
+function validate(){
+	if (document.getElementById("recipeName").value == ""){
+	    return false;
+	  }
+}
 		
 

@@ -105,8 +105,8 @@
                             <input type="text" id="username" name="username" placeholder="username" required>
                             <br>
 
-                            <!-- <input type="text" name="recipe" id="recipeName" style="display:none">
-                            <input type="text" name="imgLink" id="imgLink" style="display:none"> -->
+                            <input type="text" name="recipe" id="recipeName" style="display:none">
+                            <input type="text" name="imgLink" id="imgLink" style="display:none">
                             
                             <input type="submit" value="Save This Pick">
                         </form>
@@ -116,6 +116,18 @@
             </div>
             
     </center>
-	    
+    
+    <script>
+        function validate(){
+	    if(document.getElementById("recipeName").value == ""){
+		return false;
+	  }
+	}
+        
+        function checkEntered() {
+            return false;
+        }
+    </script>    
+    
     </body>
 </html>
