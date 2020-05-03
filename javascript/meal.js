@@ -30,6 +30,10 @@ function setUpAPI() {
                   output_div.innerHTML = "";
                   output_div2.innerHTML = objData.meals[meal_num].strMeal + "<br>";
                   output_div.innerHTML = "<img src='" + objData.meals[meal_num].strMealThumb + "' style='width:400px'>" + "<br>";
+				  
+				document.getElementById("recipeName").value = objData.meals[meal_num].strMeal;
+				document.getElementById("imgLink").value = objData.meals[meal_num].strMealThumb;
+
 
               } else if (request.readyState == 4 && request.status != 200) {
                   alert("Please try again!");
@@ -37,15 +41,10 @@ function setUpAPI() {
           }
           request.send();
         }
-
-function resultsAppear () {
-    document.getElementById("error").innerHTML = "";
-    if (document.getElementById("meal_type").value != "null") {
-        document.getElementById('result').style.display="block";
-    } else {
-        document.getElementById("error").innerHTML = "<strong style='color: white;'> Please Select A Meal Type </strong>";
-    }
-    setUpAPI();
-}
 		
+function validate(){
+	if (document.getElementById("recipeName").value == ""){
+	    return false;
+	  }
 
+}
