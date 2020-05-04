@@ -1,6 +1,6 @@
 function setUpAPI() {
           /* Main Function Processing */
-          /* grabbing div & user_bev_type to write text to */
+          /* grabbing div & user_meal_type to write text to */
           output_div  = document.getElementById("meal-image");
           output_div2  = document.getElementById("meal-name");
           user_answer = document.getElementById("meal_type").value;
@@ -9,7 +9,7 @@ function setUpAPI() {
           if (user_answer == "surprise"){
               var url = "https://www.themealdb.com/api/json/v1/1/random.php";
               console.log("surprise me drink chosen");
-          } else if (user_answer == "Type of Meal") {
+          } else if (user_answer == "null") {
               /* do nothing, user hasn't made a choice */ 
               return;
           } else {
@@ -41,10 +41,19 @@ function setUpAPI() {
           }
           request.send();
         }
+
+function ResultsAppear() {
+    document.getElementById("error").innerHTML = "";
+    if (document.getElementById("meal_type").value != "null") {
+        document.getElementById("result").style.display="block";     
+    } else {
+        document.getElementById("error").innerHTML = "<strong style='color: white;'> Please Select A Meal Type </strong>";
+    }
+    setUpAPI();
+}
 		
 function validate(){
 	if (document.getElementById("recipeName").value == ""){
 	    return false;
 	  }
-
 }
